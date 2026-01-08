@@ -1,22 +1,25 @@
-export enum TaskStatus {
-  Todo = 'Todo',
-  InProgress = 'InProgress',
-  Review = 'Review',
-  Done = 'Done',
-}
+export const TaskStatus = {
+  Todo: 'Todo',
+  InProgress: 'InProgress',
+  Review: 'Review',
+  Done: 'Done',
+} as const;
+export type TaskStatus = (typeof TaskStatus)[keyof typeof TaskStatus];
 
-export enum TaskPriority {
-  Low = 'Low',
-  Medium = 'Medium',
-  High = 'High',
-  Urgent = 'Urgent',
-}
+export const TaskPriority = {
+  Low: 'Low',
+  Medium: 'Medium',
+  High: 'High',
+  Urgent: 'Urgent',
+} as const;
+export type TaskPriority = (typeof TaskPriority)[keyof typeof TaskPriority];
 
-export enum UserRole {
-  User = 'User',
-  Manager = 'Manager',
-  Admin = 'Admin',
-}
+export const UserRole = {
+  User: 'User',
+  Manager: 'Manager',
+  Admin: 'Admin',
+} as const;
+export type UserRole = (typeof UserRole)[keyof typeof UserRole];
 
 export interface User {
   id: string;
