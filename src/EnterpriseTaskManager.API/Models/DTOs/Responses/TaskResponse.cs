@@ -1,4 +1,5 @@
 using EnterpriseTaskManager.API.Models.Entities;
+using TaskStatus = EnterpriseTaskManager.API.Models.Entities.TaskStatus;
 
 namespace EnterpriseTaskManager.API.Models.DTOs.Responses;
 
