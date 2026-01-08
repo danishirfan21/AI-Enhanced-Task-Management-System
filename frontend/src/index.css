@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  /* AI-specific components */
+  .ai-badge {
+    @apply inline-flex items-center px-2 py-1 rounded text-xs font-medium bg-gradient-to-r from-ai-primary to-ai-accent text-white;
+  }
+
+  .ai-chip {
+    @apply inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-white border-2 border-ai-primary text-ai-primary hover:bg-ai-primary hover:text-white transition-colors cursor-pointer;
+  }
+
+  .ai-thinking {
+    @apply animate-pulse-slow;
+  }
+
+  /* Sentiment badges */
+  .sentiment-positive {
+    @apply bg-sentiment-positive/10 text-sentiment-positive border border-sentiment-positive/20;
+  }
+
+  .sentiment-negative {
+    @apply bg-sentiment-negative/10 text-sentiment-negative border border-sentiment-negative/20;
+  }
+
+  .sentiment-neutral {
+    @apply bg-sentiment-neutral/10 text-sentiment-neutral border border-sentiment-neutral/20;
+  }
+
+  .sentiment-urgent {
+    @apply bg-sentiment-urgent/10 text-sentiment-urgent border border-sentiment-urgent/20;
+  }
+}
+
+@layer utilities {
+  .ai-gradient {
+    @apply bg-gradient-to-r from-ai-gradient-from to-ai-gradient-to;
+  }
+
+  .ai-text-gradient {
+    @apply bg-gradient-to-r from-ai-gradient-from to-ai-gradient-to bg-clip-text text-transparent;
+  }
+}
